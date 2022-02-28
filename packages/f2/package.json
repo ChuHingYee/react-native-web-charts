@@ -1,6 +1,6 @@
 {
   "name": "@react-native-web-charts/f2",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "@antv/f2 html for react-native-web-charts",
   "scripts": {
     "lint": "eslint \"src/*.{ts,js}\"",
