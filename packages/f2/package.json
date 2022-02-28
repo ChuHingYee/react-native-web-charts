@@ -1,0 +1,37 @@
+{
+  "name": "@react-native-web-charts/f2",
+  "version": "0.0.0",
+  "description": "@antv/f2 html for react-native-web-charts",
+  "scripts": {
+    "lint": "eslint \"src/*.{ts,js}\"",
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "author": "ChuHingYee",
+  "license": "MIT",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.16.1",
+    "css-loader": "^6.6.0",
+    "eslint": "^8.10.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss": "^8.4.7",
+    "postcss-loader": "^6.2.1",
+    "pug": "^3.0.2",
+    "pug-loader": "^2.4.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@antv/f2": "^3.8.10",
+    "postcss-preset-env": "^7.4.1"
+  },
+  "files": [
+    "dist"
+  ]
+}

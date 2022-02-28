@@ -1,0 +1,34 @@
+{
+  "name": "@react-native-web-charts/monorepo",
+  "private": true,
+  "description": "@react-native-web-charts's monorepo",
+  "scripts": {
+    "preinstall": "esno scripts/disallow-pnpm.ts",
+    "prepare": "husky install",
+    "verify:commit": "esno scripts/verify-commit.ts",
+    "build:all": "pnpm -r --filter ./packages run build",
+    "release": "esno scripts/release.ts"
+  },
+  "author": "ChuHingYee",
+  "license": "MIT",
+  "engines": {
+    "pnpm": ">=6"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.16.1",
+    "@changesets/changelog-github": "^0.4.3",
+    "@changesets/cli": "^2.21.0",
+    "eslint": "^8.10.0",
+    "eslint-define-config": "^1.2.5",
+    "esno": "^0.14.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "^2.5.1"
+  },
+  "lint-staged": {
+    "{packages,scripts}/**/*.{js,ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
