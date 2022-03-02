@@ -21,13 +21,14 @@ find the chart.html in to your node_modules/@react-native-web-charts/**/dist and
 ## Example
 
 ```javascript
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import {RNWebChart} from '@react-native-web-charts/webview';
 import {WebView} from 'react-native-webview';
 import type {WebViewMessageEvent} from 'react-native-webview';
 
 const Example = () => {
   const ref = useRef<WebView | null>(null);
+  const [isEmpty, setIsEmpty] = useState(false);
   const handleWebViewMessage = (ev: WebViewMessageEvent) => {
     console.log(ev);
   };
@@ -58,7 +59,7 @@ const Example = () => {
     }
   };
   useEffect(() => {
-    const timer = setInterval(() => {
+    setTimeout(() => {
       if (ref.current) {
         ref.current.injectJavaScript(`(function() {
           window.rnChart.chart.setOption({series: [
@@ -71,18 +72,20 @@ const Example = () => {
             }
           ]})
         })();`);
+        setTimeout(() => {
+          setIsEmpty(true);
+        }, 3000);
       }
-    }, 2000);
-    return () => {
-      clearInterval(timer);
-    };
+    }, 3000);
   }, []);
   return (
     <RNWebChart
-      style={{
+      containerStyle={{
         height: 300,
       }}
       ref={ref}
+      isEmpty={isEmpty}
+      emptyText="no data"
       onLoad={webviewOnLoad}
       onMessage={handleWebViewMessage}
     />
