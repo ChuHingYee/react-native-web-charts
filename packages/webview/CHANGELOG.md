@@ -1,5 +1,13 @@
 # @react-native-web-charts/webview
 
+## 1.0.1
+
+### Patch Changes
+
+#### Features
+
+- feat: add the empty prop (1e9c2ed)
+
 ## 1.0.0
 
 ### Major Changes
