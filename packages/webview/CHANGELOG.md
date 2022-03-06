@@ -1,5 +1,12 @@
 # @react-native-web-charts/webview
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @react-native-web-charts/echarts@1.0.1
+
 ## 1.0.1
 
 ### Patch Changes

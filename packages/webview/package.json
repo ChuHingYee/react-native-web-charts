@@ -1,6 +1,6 @@
 {
   "name": "@react-native-web-charts/webview",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "the react-native component for react-native-web-charts",
   "main": "dist/index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "yargs-parser": "^21.0.0"
   },
   "dependencies": {
-    "@react-native-web-charts/echarts": "workspace:^1.0.0",
+    "@react-native-web-charts/echarts": "workspace:^1.0.1",
     "@react-native-web-charts/f2": "workspace:^1.0.0",
     "react": "^17.0.2",
     "react-native": "^0.67.3",
