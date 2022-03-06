@@ -1,5 +1,13 @@
 # @react-native-web-charts/webview
 
+## 1.0.3
+
+### Patch Changes
+
+#### Bugfixes
+
+- fix: remove default marginTop (3f6aa6a)
+
 ## 1.0.2
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@react-native-web-charts/webview",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "the react-native component for react-native-web-charts",
   "main": "dist/index.js",
   "scripts": {
