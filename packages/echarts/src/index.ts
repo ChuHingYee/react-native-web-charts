@@ -1,6 +1,7 @@
 import * as echarts from 'echarts/core'
 import {
   DataZoomComponent,
+  DatasetComponent,
   GridComponent,
   LegendComponent,
   MarkLineComponent,
@@ -36,6 +37,7 @@ echarts.use([
   TooltipComponent,
   GridComponent,
   DataZoomComponent,
+  DatasetComponent,
   LegendComponent,
   VisualMapComponent,
   MarkLineComponent,
@@ -66,18 +68,20 @@ window.onload = () => {
         color,
       } = ev
       const vm = window.ReactNativeWebView ? window.ReactNativeWebView : window
-      vm.postMessage(JSON.stringify({
-        componentType,
-        seriesType,
-        seriesIndex,
-        seriesName,
-        name,
-        dataIndex,
-        data,
-        dataType,
-        value,
-        color,
-      }))
+      vm.postMessage(
+        JSON.stringify({
+          componentType,
+          seriesType,
+          seriesIndex,
+          seriesName,
+          name,
+          dataIndex,
+          data,
+          dataType,
+          value,
+          color,
+        }),
+      )
     },
   }
 }
