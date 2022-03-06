@@ -49,7 +49,6 @@ const RNWebChart = (props: WebChartProps, ref?: Ref<WebView>) => {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 50,
     height: 300,
   },
   empty: {
