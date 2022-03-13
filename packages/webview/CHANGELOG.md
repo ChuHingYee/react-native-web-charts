@@ -1,5 +1,13 @@
 # @react-native-web-charts/webview
 
+## 2.0.1
+
+### Major Changes
+
+#### Features
+
+- feat: open the source prop (6d140a5)
+
 ## 1.0.3
 
 ### Patch Changes
