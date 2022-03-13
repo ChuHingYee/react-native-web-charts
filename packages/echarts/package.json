@@ -31,7 +31,11 @@
     "echarts": "^5.3.0",
     "postcss-preset-env": "^7.4.1"
   },
+  "main": "dist/index.js",
+  "types": "types/index.d.ts",
   "files": [
-    "dist"
+    "dist/index.js",
+    "dist/chart.html",
+    "types/*.d.ts"
   ]
 }
