@@ -1,5 +1,13 @@
 # @react-native-web-charts/webview
 
+## 2.0.2
+
+### Patch Changes
+
+#### Bugfixes
+
+- fix: forgot build file when last version!
+
 ## 2.0.1
 
 ### Major Changes
