@@ -1,8 +1,8 @@
-English | [简体中文](./README_zh-CN.md)
+English | [简体中文](https://github.com/ChuHingYee/react-native-web-charts/blob/master/packages/webview/README_zh-CN.md)
 
 # @react-native-web-charts/webview
 
-the charts react-native's component base on react-native-webview(support Echarts or F2)
+the charts react-native's component base on react-native-webview
 
 ## Installation
 
@@ -16,13 +16,14 @@ npm i react-native-webview @react-native-web-charts/webview --save
 
 #### Android
 
-find the chart.html in to your node_modules/@react-native-web-charts/**/dist and copy that to android/app/src/main/assets
+if you use xxx.html for charts,you need to copy that to android/app/src/main/assets
 
 ## Example
 
 ```javascript
 import React, {useEffect, useState, useRef} from 'react';
 import {RNWebChart} from '@react-native-web-charts/webview';
+import {html} from '@react-native-web-charts/echarts';
 import {WebView} from 'react-native-webview';
 import type {WebViewMessageEvent} from 'react-native-webview';
 
@@ -88,31 +89,28 @@ const Example = () => {
       emptyText="no data"
       onLoad={webviewOnLoad}
       onMessage={handleWebViewMessage}
+      source={
+        html:html
+      }
     />
   );
 };
 export default Example;
 ```
 
-## Change Chart Dependency
-
-### Android
-
-find the chart.html in to your node_modules/@react-native-web-charts/**/dist and copy that to android/app/src/main/assets
-
-
-### IOS
-
-find the chart.html in to your node_modules/@react-native-web-charts/**/dist and copy that to node_modules/@react-native-web-charts/webview/dist
-
-
 ## Options
 
 [check out the API Reference](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)
 
+## Questions
+
+if you meet some errors when has multiple chart,you can set opacity: 0.99 in webStyle
+
 ## Thanks
 
-Thanks for [react-native-webview](https://github.com/react-native-webview/react-native-webview)
+Thanks 
+[react-native-webview](https://github.com/react-native-webview/react-native-webview)
+[native-echarts](https://github.com/somonus/react-native-echarts)
 
 ## Meta
 

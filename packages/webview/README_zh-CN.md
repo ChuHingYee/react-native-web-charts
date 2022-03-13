@@ -1,8 +1,8 @@
-[English](./README.md) | 简体中文
+[English](https://github.com/ChuHingYee/react-native-web-charts/blob/master/packages/webview/README.md) | 简体中文
 
 # @react-native-web-charts/webview
 
-基于 react-native-webview 的可视化图表组件（支持 ECharts/f2 等前端可视化图表）。原理为利用 webview 组件的 injectedJavaScript 和 injectJavaScript 属性加载本地 html 文件。
+基于 react-native-webview 的可视化图表组件。原理为利用 webview 组件的 injectedJavaScript 和 injectJavaScript 属性加载本地 html 文件。
 
 ## 安装
 
@@ -16,13 +16,14 @@ npm i react-native-webview @react-native-web-charts/webview --save
 
 #### Android
 
-在 node_modules/@react-native-web-charts/\*\*/dist 目录找到 chart.html 文件并复制到 android/app/src/main/assets
+如果你是用xxx.html这种方式提供source的话，你需要将页面复制到 android/app/src/main/assets
 
 ## 示例
 
 ```javascript
 import React, {useEffect, useState, useRef} from 'react';
 import {RNWebChart} from '@react-native-web-charts/webview';
+import {html} from '@react-native-web-charts/echarts';
 import {WebView} from 'react-native-webview';
 import type {WebViewMessageEvent} from 'react-native-webview';
 
@@ -88,29 +89,29 @@ const Example = () => {
       emptyText="no data"
       onLoad={webviewOnLoad}
       onMessage={handleWebViewMessage}
+      source={
+        html:html
+      }
     />
   );
 };
 export default Example;
 ```
 
-## 切换可视化库
-
-### Android
-
-在 node_modules/@react-native-web-charts/\*\*/dist 找到 chart.html 并将其复制到项目根目录下 android/app/src/main/assets
-
-### IOS
-
-在 node_modules/@react-native-web-charts/\*\*/dist 找到 chart.html 并将其复制到项目根目录下 node_modules/@react-native-web-charts/webview/dist
-
 ## 参数
 
 [API 指引](https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md)
 
+## 问题
+
+如果存在多个图表退出页面是发生闪退，请在webStyle加入opacity: 0.99
+
 ## 感谢
 
-🙏 感谢[react-native-webview](https://github.com/react-native-webview/react-native-webview)
+🙏 感谢
+[react-native-webview](https://github.com/react-native-webview/react-native-webview)
+[native-echarts](https://github.com/somonus/react-native-echarts)
+
 
 ## 其他
 

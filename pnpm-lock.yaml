@@ -110,7 +110,7 @@ importers:
     specifiers:
       '@babel/core': ^7.17.5
       '@react-native-community/eslint-config': ^3.0.1
-      '@react-native-web-charts/echarts': workspace:^1.0.0
+      '@react-native-web-charts/echarts': workspace:^1.0.1
       '@react-native-web-charts/f2': workspace:^1.0.0
       '@rollup/plugin-babel': ^5.3.1
       '@rollup/plugin-commonjs': ^21.0.2

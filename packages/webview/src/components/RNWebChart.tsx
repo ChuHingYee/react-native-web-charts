@@ -1,15 +1,12 @@
 import React, {memo, forwardRef} from 'react';
-import {Platform, View, Text, StyleSheet} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 import {StyleProp, ViewStyle} from 'react-native';
 import {WebView} from 'react-native-webview';
 import type {WebViewProps} from 'react-native-webview';
 import type {Ref} from 'react';
 
 interface WebChartProps
-  extends Omit<
-    WebViewProps,
-    'javaScriptEnabled' | 'scrollEnabled' | 'source' | 'style'
-  > {
+  extends Omit<WebViewProps, 'javaScriptEnabled' | 'style'> {
   children?: JSX.Element | JSX.Element[] | string | any;
   containerStyle?: StyleProp<ViewStyle>;
   emptyText?: string;
@@ -18,21 +15,25 @@ interface WebChartProps
 }
 
 const RNWebChart = (props: WebChartProps, ref?: Ref<WebView>) => {
-  let source = Platform.select({
-    android: {uri: 'file:///android_asset/chart.html'},
-    ios: require('./chart.html'),
-  });
-  const {containerStyle, webStyle, children, isEmpty, emptyText, ...rest} =
-    props;
+  const {
+    containerStyle,
+    webStyle,
+    children,
+    isEmpty,
+    emptyText,
+    source,
+    ...rest
+  } = props;
   return (
     <View style={styles.container} {...containerStyle}>
       <WebView
-        {...rest}
+        originWhitelist={['*']}
         ref={ref}
         style={webStyle}
         javaScriptEnabled
         scrollEnabled={false}
         source={source}
+        {...rest}
       />
       {isEmpty && (
         <View style={styles.empty}>
