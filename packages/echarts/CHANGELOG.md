@@ -1,5 +1,13 @@
 # @react-native-web-charts/echarts
 
+## 1.1.0
+
+### Minor Changes
+
+#### Features
+
+- feat: export html-string (4dabb0c)
+
 ## 1.0.1
 
 ### Patch Changes
