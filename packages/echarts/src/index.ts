@@ -51,7 +51,8 @@ echarts.use([
 ])
 
 window.onload = () => {
-  const rnChart = echarts.init(document.getElementById('main'))
+  const dom = document.getElementById('main')
+  const rnChart = echarts.init(dom)
   window.rnChart = {
     chart: rnChart,
     onClick: (ev: EventParamsWithAny) => {
@@ -82,6 +83,12 @@ window.onload = () => {
           color,
         }),
       )
+    },
+    init: (theme: string|object, opts?: any) => {
+      window.rnChart.chart = echarts.init(dom, theme, opts)
+    },
+    registerTheme: (name: string, theme: object) => {
+      echarts.registerTheme(name, theme)
     },
   }
 }
