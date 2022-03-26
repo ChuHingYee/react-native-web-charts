@@ -1,5 +1,13 @@
 # @react-native-web-charts/echarts
 
+## 1.1.1
+
+### Patch Changes
+
+#### Features
+
+- feat: add init method and registerTheme method (ff89e9f)
+
 ## 1.1.0
 
 ### Minor Changes
