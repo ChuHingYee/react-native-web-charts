@@ -1,5 +1,13 @@
 # @react-native-web-charts/webview
 
+## 2.0.3
+
+### Patch Changes
+
+#### Bugfixes
+
+- fix: fix the wrap show unnormal when in some backgroundColor (c819c6c)
+
 ## 2.0.2
 
 ### Patch Changes
