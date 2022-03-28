@@ -1,5 +1,13 @@
 # @react-native-web-charts/echarts
 
+## 1.1.2
+
+### Patch Changes
+
+#### Bugfixes
+
+- fix: ban user-select (9549b9b)
+
 ## 1.1.1
 
 ### Patch Changes
